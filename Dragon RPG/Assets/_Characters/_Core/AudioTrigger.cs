@@ -12,7 +12,7 @@ public class AudioTrigger : MonoBehaviour
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+       audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.clip = clip;
 
@@ -23,6 +23,7 @@ public class AudioTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.layer == layerFilter)
         {
             

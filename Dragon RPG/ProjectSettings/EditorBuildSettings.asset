@@ -7,9 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/_Scenes/_Scene1.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/_Scenes/Combat Sandbox2.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/_Scenes/Combat Sandbox.unity
-  - enabled: 1
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Levels/_Scene1.unity
+    guid: 00000000000000000000000000000000

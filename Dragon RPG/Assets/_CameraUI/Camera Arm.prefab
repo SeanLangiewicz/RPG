@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114469572601596452}
   m_Layer: 0
   m_Name: Camera Arm
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,27 +54,27 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135546847385324}
-  m_LocalRotation: {x: 0.19129229, y: -0, z: -0, w: 0.98153317}
-  m_LocalPosition: {x: 1.15, y: 3.56, z: -5.08}
+  m_LocalRotation: {x: -0, y: 0.9878578, z: -0.1553611, w: 0}
+  m_LocalPosition: {x: 0, y: 4.375, z: 4.694}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4675844910086444}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.056002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.875, y: 180.00002, z: 0}
 --- !u!4 &4675844910086444
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023444603634054}
-  m_LocalRotation: {x: 0, y: 0.9908129, z: -0.13524002, w: 0}
-  m_LocalPosition: {x: 6.21, y: 2.61, z: -0.31}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4058341393878336}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15.545001, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20346672447020568
 Camera:
   m_ObjectHideFlags: 1
@@ -105,6 +105,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
+  m_AllowMSAA: 0
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022

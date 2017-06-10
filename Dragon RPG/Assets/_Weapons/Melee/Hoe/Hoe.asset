@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Hoe
   m_EditorClassIdentifier: 
   minTimeBetweenHits: 1
-  maxAttackRange: 1.5
+  maxAttackRange: 3
   weaponPrefab: {fileID: 1274797246840802, guid: cc0dbe33ee8adbe4eb124e2d95d37fe4,
     type: 2}
-  attackAnimation: {fileID: 7400000, guid: fa2e4218597459545922351daff42f77, type: 3}
+  attackAnimation: {fileID: 7400000, guid: 4496e3e9b4c7231499b46f4e5d36d430, type: 3}
   gripTransform: {fileID: 4475369480697998, guid: 8d1999a6fbda2bd45a6caeb6d403cf6b,
     type: 2}
