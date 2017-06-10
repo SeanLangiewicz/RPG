@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e8046053090c04bbb700bf7c0a7f6a, type: 3}
+  m_Name: Rod
+  m_EditorClassIdentifier: 
+  gripTransform: {fileID: 4790551870416182, guid: 745048e3613dd1e49834b19b71da1d5f,
+    type: 2}
+  weaponPrefab: {fileID: 1873799556880230, guid: b6efbfd02cb7d344d94413d2be89cae5,
+    type: 2}
+  attackAnimation: {fileID: 7400000, guid: 01ce608905e9d3e48928ced7d03f19ed, type: 3}
