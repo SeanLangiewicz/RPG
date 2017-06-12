@@ -777,7 +777,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33118149093896414
 MeshFilter:
@@ -809,7 +808,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904332725170944}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 867694a5858127940bb9ecb81fec5742, type: 3}
+  m_Avatar: {fileID: 9000000, guid: c8e7b38172649374e8e61210fe7c3283, type: 3}
   m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -946,7 +945,6 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -985,7 +983,6 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904332725170944}
   m_Enabled: 1
-  m_AgentTypeID: 0
   m_Radius: 0.29
   m_Speed: 3
   m_Acceleration: 8
