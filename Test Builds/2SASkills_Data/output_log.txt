@@ -1,0 +1,423 @@
+Mono path[0] = 'C:/Users/monke/Documents/__Software Development/repos/RPG/rpg/Test Builds/2SASkills_Data/Managed'
+Mono path[1] = 'C:/Users/monke/Documents/__Software Development/repos/RPG/rpg/Test Builds/2SASkills_Data/Mono'
+Mono config path = 'C:/Users/monke/Documents/__Software Development/repos/RPG/rpg/Test Builds/2SASkills_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/monke/Documents/__Software Development/repos/RPG/rpg/Test Builds/2SASkills_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55080
+Multi-casting "[IP] 192.168.1.70 [Port] 55080 [Flags] 3 [Guid] 2570498816 [EditorId] 406959232 [Version] 1048832 [Id] WindowsPlayer(Sean-PC) [Debug] 1" to [225.0.0.222:54997]...
+Waiting for connection from host on [0.0.0.0:55080]...
+PlayerConnection accepted from [192.168.1.70] handle:0x348
+Started listening to [0.0.0.0:55080]
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56816
+PlayerConnection already initialized - listening to [0.0.0.0:55080]
+Initialize engine version: 5.5.4f1 (8ffd0efd98b1)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 Ti (ID=0x1b06)
+    Vendor:   NVIDIA
+    VRAM:     11158 MB
+    Driver:   22.21.13.8205
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.029 seconds
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Test Builds\2SASkills_Data\Managed\System.dll (this message is harmless)
+desktop: 3840x2160 60Hz; virtual: 8640x2160 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.810197 ms
+Area Effect behavior attached to Player
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7057CE5E4 (2SASkills) DebugLogHandler_CUSTOM_Internal_Log
+0x00000000067081F3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,string,UnityEngine.Object)
+0x0000000006708054 (Mono JIT Code) [DebugLogHandler.cs:9] UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) 
+0x00000000067079E5 (Mono JIT Code) [Logger.cs:41] UnityEngine.Logger:Log (UnityEngine.LogType,object) 
+0x0000000006707226 (Mono JIT Code) [DebugBindings.gen.cs:98] UnityEngine.Debug:Log (object) 
+0x0000000006707137 (Mono JIT Code) [MonoBehaviourBindings.gen.cs:104] UnityEngine.MonoBehaviour:print (object) 
+0x0000000006706EF9 (Mono JIT Code) [AreaEffectBeahvior.cs:20] AreaEffectBeahvior:Start () 
+0x00000000066DD842 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+0x00007FF991CE54D7 (mono) mono_set_defaults
+0x00007FF991C383ED (mono) mono_runtime_invoke
+0x00007FF705774495 (2SASkills) ScriptingInvocation::Invoke
+0x00007FF705767A22 (2SASkills) MonoBehaviour::InvokeMethodOrCoroutineChecked
+0x00007FF705767E60 (2SASkills) MonoBehaviour::InvokeMethodOrCoroutineChecked
+0x00007FF705768705 (2SASkills) MonoBehaviour::Start
+0x00007FF705768B49 (2SASkills) MonoBehaviour::DelayedStartCall
+0x00007FF7053FD019 (2SASkills) DelayedCallManager::Update
+0x00007FF7055B91D4 (2SASkills) GfxDeviceNull::SetWireframe
+0x00007FF7055BB1BC (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 15b4 -> priority: 1 
+  Thread -> id: 3ab8 -> priority: 1 
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Area Effect used by  Player
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7057CE5E4 (2SASkills) DebugLogHandler_CUSTOM_Internal_Log
+0x00000000067081F3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,string,UnityEngine.Object)
+0x0000000006708054 (Mono JIT Code) [DebugLogHandler.cs:9] UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) 
+0x00000000067079E5 (Mono JIT Code) [Logger.cs:41] UnityEngine.Logger:Log (UnityEngine.LogType,object) 
+0x0000000006707226 (Mono JIT Code) [DebugBindings.gen.cs:98] UnityEngine.Debug:Log (object) 
+0x0000000006707137 (Mono JIT Code) [MonoBehaviourBindings.gen.cs:104] UnityEngine.MonoBehaviour:print (object) 
+0x000000000676A3C6 (Mono JIT Code) [AreaEffectBeahvior.cs:25] AreaEffectBeahvior:Use (RPG.Characters.AbilityUseParams) 
+0x000000000676A227 (Mono JIT Code) [SpecialAbilityConfig.cs:34] RPG.Characters.SpecialAbility:Use (RPG.Characters.AbilityUseParams) 
+0x0000000006769925 (Mono JIT Code) [Player.cs:124] RPG.Characters.Player:AttemptSpecialAbility (int,RPG.Characters.Enemy) 
+0x00000000067695B0 (Mono JIT Code) [Player.cs:112] RPG.Characters.Player:onMouseOverEnemy (RPG.Characters.Enemy) 
+0x0000000006769264 (Mono JIT Code) (wrapper delegate-invoke) RPG.CameraUI.CameraRaycaster/OnMouseOverEnemy:invoke_void__this___Enemy (RPG.Characters.Enemy)
+0x00000000067210D2 (Mono JIT Code) [CameraRaycaster.cs:62] RPG.CameraUI.CameraRaycaster:RaycastForEnemy (UnityEngine.Ray) 
+0x0000000006720C70 (Mono JIT Code) [CameraRaycaster.cs:42] RPG.CameraUI.CameraRaycaster:PerformRaycasts () 
+0x000000000671FCE2 (Mono JIT Code) [CameraRaycaster.cs:34] RPG.CameraUI.CameraRaycaster:Update () 
+0x00000000066DD842 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+0x00007FF991CE54D7 (mono) mono_set_defaults
+0x00007FF991C383ED (mono) mono_runtime_invoke
+0x00007FF705774495 (2SASkills) ScriptingInvocation::Invoke
+0x00007FF705765AF8 (2SASkills) MonoBehaviour::CallMethodIfAvailable
+0x00007FF705768751 (2SASkills) MonoBehaviour::Update
+0x00007FF7053FBADF (2SASkills) BaseBehaviourManager::CommonUpdate<BehaviourManager>
+0x00007FF7053FBD3B (2SASkills) BehaviourManager::Update
+0x00007FF7055BB241 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Area Effect used by  Player
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7057CE5E4 (2SASkills) DebugLogHandler_CUSTOM_Internal_Log
+0x00000000067081F3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,string,UnityEngine.Object)
+0x0000000006708054 (Mono JIT Code) [DebugLogHandler.cs:9] UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) 
+0x00000000067079E5 (Mono JIT Code) [Logger.cs:41] UnityEngine.Logger:Log (UnityEngine.LogType,object) 
+0x0000000006707226 (Mono JIT Code) [DebugBindings.gen.cs:98] UnityEngine.Debug:Log (object) 
+0x0000000006707137 (Mono JIT Code) [MonoBehaviourBindings.gen.cs:104] UnityEngine.MonoBehaviour:print (object) 
+0x000000000676A3C6 (Mono JIT Code) [AreaEffectBeahvior.cs:25] AreaEffectBeahvior:Use (RPG.Characters.AbilityUseParams) 
+0x000000000676A227 (Mono JIT Code) [SpecialAbilityConfig.cs:34] RPG.Characters.SpecialAbility:Use (RPG.Characters.AbilityUseParams) 
+0x0000000006769925 (Mono JIT Code) [Player.cs:124] RPG.Characters.Player:AttemptSpecialAbility (int,RPG.Characters.Enemy) 
+0x00000000067695B0 (Mono JIT Code) [Player.cs:112] RPG.Characters.Player:onMouseOverEnemy (RPG.Characters.Enemy) 
+0x0000000006769264 (Mono JIT Code) (wrapper delegate-invoke) RPG.CameraUI.CameraRaycaster/OnMouseOverEnemy:invoke_void__this___Enemy (RPG.Characters.Enemy)
+0x00000000067210D2 (Mono JIT Code) [CameraRaycaster.cs:62] RPG.CameraUI.CameraRaycaster:RaycastForEnemy (UnityEngine.Ray) 
+0x0000000006720C70 (Mono JIT Code) [CameraRaycaster.cs:42] RPG.CameraUI.CameraRaycaster:PerformRaycasts () 
+0x000000000671FCE2 (Mono JIT Code) [CameraRaycaster.cs:34] RPG.CameraUI.CameraRaycaster:Update () 
+0x00000000066DD842 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+0x00007FF991CE54D7 (mono) mono_set_defaults
+0x00007FF991C383ED (mono) mono_runtime_invoke
+0x00007FF705774495 (2SASkills) ScriptingInvocation::Invoke
+0x00007FF705765AF8 (2SASkills) MonoBehaviour::CallMethodIfAvailable
+0x00007FF705768751 (2SASkills) MonoBehaviour::Update
+0x00007FF7053FBADF (2SASkills) BaseBehaviourManager::CommonUpdate<BehaviourManager>
+0x00007FF7053FBD3B (2SASkills) BehaviourManager::Update
+0x00007FF7055BB241 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Area Effect used by  Player
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7057CE5E4 (2SASkills) DebugLogHandler_CUSTOM_Internal_Log
+0x00000000067081F3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,string,UnityEngine.Object)
+0x0000000006708054 (Mono JIT Code) [DebugLogHandler.cs:9] UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) 
+0x00000000067079E5 (Mono JIT Code) [Logger.cs:41] UnityEngine.Logger:Log (UnityEngine.LogType,object) 
+0x0000000006707226 (Mono JIT Code) [DebugBindings.gen.cs:98] UnityEngine.Debug:Log (object) 
+0x0000000006707137 (Mono JIT Code) [MonoBehaviourBindings.gen.cs:104] UnityEngine.MonoBehaviour:print (object) 
+0x000000000676A3C6 (Mono JIT Code) [AreaEffectBeahvior.cs:25] AreaEffectBeahvior:Use (RPG.Characters.AbilityUseParams) 
+0x000000000676A227 (Mono JIT Code) [SpecialAbilityConfig.cs:34] RPG.Characters.SpecialAbility:Use (RPG.Characters.AbilityUseParams) 
+0x0000000006769925 (Mono JIT Code) [Player.cs:124] RPG.Characters.Player:AttemptSpecialAbility (int,RPG.Characters.Enemy) 
+0x00000000067695B0 (Mono JIT Code) [Player.cs:112] RPG.Characters.Player:onMouseOverEnemy (RPG.Characters.Enemy) 
+0x0000000006769264 (Mono JIT Code) (wrapper delegate-invoke) RPG.CameraUI.CameraRaycaster/OnMouseOverEnemy:invoke_void__this___Enemy (RPG.Characters.Enemy)
+0x00000000067210D2 (Mono JIT Code) [CameraRaycaster.cs:62] RPG.CameraUI.CameraRaycaster:RaycastForEnemy (UnityEngine.Ray) 
+0x0000000006720C70 (Mono JIT Code) [CameraRaycaster.cs:42] RPG.CameraUI.CameraRaycaster:PerformRaycasts () 
+0x000000000671FCE2 (Mono JIT Code) [CameraRaycaster.cs:34] RPG.CameraUI.CameraRaycaster:Update () 
+0x00000000066DD842 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+0x00007FF991CE54D7 (mono) mono_set_defaults
+0x00007FF991C383ED (mono) mono_runtime_invoke
+0x00007FF705774495 (2SASkills) ScriptingInvocation::Invoke
+0x00007FF705765AF8 (2SASkills) MonoBehaviour::CallMethodIfAvailable
+0x00007FF705768751 (2SASkills) MonoBehaviour::Update
+0x00007FF7053FBADF (2SASkills) BaseBehaviourManager::CommonUpdate<BehaviourManager>
+0x00007FF7053FBD3B (2SASkills) BehaviourManager::Update
+0x00007FF7055BB241 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Internal: JobTempAlloc has allocations that are more than 4 frames old - this is not allowed and likely a leak
+0x00007FF705CBE3C4 (2SASkills) StackWalker::GetCurrentCallstack
+0x00007FF705CBFFF8 (2SASkills) StackWalker::ShowCallstack
+0x00007FF7057C09AF (2SASkills) GetStacktrace
+0x00007FF705551642 (2SASkills) DebugStringToFile
+0x00007FF705551A9C (2SASkills) DebugStringToFile
+0x00007FF7052B4343 (2SASkills) ThreadsafeLinearAllocator::FrameMaintenance
+0x00007FF7052A8E10 (2SASkills) MemoryManager::FrameMaintenance
+0x00007FF7055BB4B7 (2SASkills) PlayerLoop
+0x00007FF705CD67F7 (2SASkills) OpenURL
+0x00007FF705CD69CA (2SASkills) TitleBarTimerUpdateCallback
+0x00007FF705CDADF4 (2SASkills) PlayerWinMain
+0x00007FF705DF2280 (2SASkills) memcpy_s
+0x00007FF9C1732774 (KERNEL32) BaseThreadInitThunk
+0x00007FF9C3180D61 (ntdll) RtlUserThreadStart
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Allocator/ThreadsafeLinearAllocator.cpp Line: 371)
+
+Waiting for finish
