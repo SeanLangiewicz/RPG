@@ -14,21 +14,11 @@ namespace RPG.Characters
     public class PlayerMovement : MonoBehaviour
     {
 
-
-
-
-
         ThirdPersonCharacter thirdPersonCharacter;   // A reference to the ThirdPersonCharacter on the object
         CameraRaycaster cameraRaycaster;
         Vector3 clickPoint;
         AICharacterControl aiCharacterControl = null;
         GameObject walkTarget = null;
-
-        [SerializeField] const int walkAbleLayerNumber = 8;
-        [SerializeField] const int enemyLayerNumber = 9;
-
-
-        //bool isInDirectMode = false;
 
         void Start()
         {
@@ -36,37 +26,34 @@ namespace RPG.Characters
             thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
             aiCharacterControl = GetComponent<AICharacterControl>();
             walkTarget = new GameObject("walkTarget");
-
-            cameraRaycaster.notifyMouseClickObservers += ProcessMouseClick;
+            
             cameraRaycaster.onMouseOverPotentiallyWalkable += OnMOuseOverPotentiallyWalkable;
-        }
+            cameraRaycaster.onMouseOverEnemy += OnMouseOverEnemy;
+                
+          }
+
+
 
         private void OnMOuseOverPotentiallyWalkable(Vector3 destination)
         {
-            if(Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0))
             {
                 walkTarget.transform.position = destination;
                 aiCharacterControl.SetTarget(walkTarget.transform);
             }
         }
 
-        void ProcessMouseClick(RaycastHit raycastHit, int layerHit)
+        void OnMouseOverEnemy(Enemy enemy)
         {
-            switch (layerHit)
+            if(Input.GetMouseButton(0)|| Input.GetMouseButton(1)) 
             {
-                case enemyLayerNumber:
-                    GameObject enemy = raycastHit.collider.gameObject;
-                    aiCharacterControl.SetTarget(enemy.transform);
-                    break;
-           
-                default:
-                    Debug.LogWarning("Dont know how to handle mouse click for player movement");
-                    return;
+                aiCharacterControl.SetTarget(enemy.transform);
             }
-
-
         }
 
+        
+
+       
 
         // TODO make this get called again
         void ProcessDirectMovemment()

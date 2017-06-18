@@ -16,11 +16,11 @@ namespace RPG.Characters
     {
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float damagePerHit = 10f;
-        [SerializeField] int enemyLayer = 9;
+      
         
-        [SerializeField] AnimatorOverrideController animatorOverrideController;
+        [SerializeField] AnimatorOverrideController animatorOverrideController = null;
 
-        // Weapon in left hand
+        // Weapon in right hand
         [SerializeField] Weapon weaponinUse;
 
         Animator animator;
@@ -39,7 +39,7 @@ namespace RPG.Characters
 
         public void Start()
         {
-            RigisterForMouseClick();
+            RegisterForMouseClick();
             SetCurrentMaxHealth();
             PutWeaponInHand();
             SetupRunTimeAnimator();
@@ -91,33 +91,28 @@ namespace RPG.Characters
 
         }
 
-        private void RigisterForMouseClick()
+        private void RegisterForMouseClick()
         {
+            
             cameraRayCaster = FindObjectOfType<CameraRaycaster>();
-            cameraRayCaster.notifyMouseClickObservers += OnMouseClick;
+            cameraRayCaster.onMouseOverEnemy += onMouseOverEnemy;
+            
         }
         
-        void OnMouseClick(RaycastHit raycastHit, int layerHit)
+        void onMouseOverEnemy (Enemy enemy)
         {
-            if (layerHit == enemyLayer)
-            {
-                var enemy = raycastHit.collider.gameObject;
-
-                if(IsTargetInRange(enemy))
-                {
-                    AttackTarget(enemy);
-                }
-                
-            }
+            if (Input.GetMouseButton(0)&& IsTargetInRange(enemy.gameObject))
+                AttackTarget(enemy);
         }
+        
 
-        private void AttackTarget(GameObject target)
+        private void AttackTarget(Enemy enemy)
         {
-            var enemyComponent = target.GetComponent<Enemy>();
+
             if (Time.time - lastHitTime > weaponinUse.GetMinTimeBetweenHits())
             {
                 animator.SetTrigger("Attack"); // TODO Make const
-                enemyComponent.TakeDamage(damagePerHit);
+                enemy.TakeDamage(damagePerHit);
                 lastHitTime = Time.time;
             }
         }

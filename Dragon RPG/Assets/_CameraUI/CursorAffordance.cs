@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,3 +47,4 @@ namespace RPG.CameraUI
     //TODO condier de-registering OnLayerChanged on leaving games scenes
 }
 }
+*/

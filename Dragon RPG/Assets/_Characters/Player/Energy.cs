@@ -3,36 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using RPG.CameraUI;
+using System;
 
 namespace RPG.Characters
 {
     public class Energy : MonoBehaviour
     {
-        [SerializeField] RawImage energyBar;
+        [SerializeField] RawImage energyBar = null;
         [SerializeField] float maxEnergyPoints = 100f;
         [SerializeField] float pointsPerHit = 10f;
 
-        public float currentEnergyPoints; //TODO make private
-        CameraRaycaster cameraRaycaster;
+        float currentEnergyPoints; //TODO make private
+        CameraUI.CameraRaycaster cameraRaycaster;
         
 
         // Use this for initialization
         void Start()
         {
             currentEnergyPoints = maxEnergyPoints;
-            cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-            cameraRaycaster.notifyRightClickObservers += ProcessRightClick;
+            //TODO Remove 
+            // cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
+            // cameraRaycaster.notifyRightClickObservers += ProcessRightClick;
+            cameraRaycaster = Camera.main.GetComponent<CameraUI.CameraRaycaster>();
+            cameraRaycaster.onMouseOverEnemy += onMouseOverEnemy;
 
         }
 
-        // Update is called once per frame
-        
-        void ProcessRightClick(RaycastHit raycastHit, int layerHit)
+        private void onMouseOverEnemy(Enemy enemy)
         {
-            float newEneryPoints = currentEnergyPoints - pointsPerHit;
-            currentEnergyPoints = Mathf.Clamp(newEneryPoints, 0f, maxEnergyPoints);
-            UpdateEnergyBar();
+            {
+                if(Input.GetMouseButtonDown(1))
+                {
+                    UpdateEnergyPoints();
+                    UpdateEnergyBar();
+                }
+            }
+
         }
+       private void UpdateEnergyPoints ()
+        {
+            float newEnergyPoints = currentEnergyPoints - pointsPerHit;
+            currentEnergyPoints = Mathf.Clamp(newEnergyPoints, 0, maxEnergyPoints);
+        } 
+
+       
 
         private void UpdateEnergyBar()
         {
