@@ -1347,6 +1347,11 @@ Prefab:
       propertyPath: m_Name
       value: Heavy Solider (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114853299089913482, guid: b4bb2344084a3f24d8bf41c9c94119d3,
+        type: 2}
+      propertyPath: maxHealthPoints
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4bb2344084a3f24d8bf41c9c94119d3, type: 2}
   m_IsPrefabParent: 0
@@ -1850,7 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 1000
-  damagePerHit: 10
+  baseDamage: 11
   animatorOverrideController: {fileID: 22100000, guid: 99dc9841784b7b24bb7be1cb6f175fee,
     type: 2}
   weaponinUse: {fileID: 11400000, guid: 8a801babcf869ea4c8c68f803c062a51, type: 2}
