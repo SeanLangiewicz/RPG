@@ -20,7 +20,7 @@ namespace RPG.Characters
         [SerializeField] Weapon weaponinUse = null;
 
         // Temporarily serialized for debugging
-        [SerializeField] SpecialAbility[] abilities;
+        [SerializeField] SpecialAbility[] abilities = null;
 
 
         Animator animator;

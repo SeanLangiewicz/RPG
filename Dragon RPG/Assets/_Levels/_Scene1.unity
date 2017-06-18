@@ -1187,6 +1187,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114293086838132006, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: maxEnergyPoints
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114090544223985308, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -1860,6 +1865,7 @@ MonoBehaviour:
     type: 2}
   weaponinUse: {fileID: 11400000, guid: 8a801babcf869ea4c8c68f803c062a51, type: 2}
   abilities:
+  - {fileID: 11400000, guid: 8564a98640a93f443860d8fe43814eee, type: 2}
   - {fileID: 11400000, guid: 46372ec822fd91a438adade46b5add9e, type: 2}
 --- !u!1001 &933408340
 Prefab:
