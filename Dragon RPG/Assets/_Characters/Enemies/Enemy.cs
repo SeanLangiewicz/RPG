@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.ThirdPerson;
+
 
 
 using RPG.Weapons; // consider re-wire
@@ -74,6 +74,7 @@ namespace RPG.Characters
             {
                 aiCharacterControl.SetTarget(transform);
             }
+
         }
 
         public void TakeDamage(float damage)

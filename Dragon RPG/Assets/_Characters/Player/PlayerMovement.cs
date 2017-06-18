@@ -1,6 +1,5 @@
 //using System;
 using UnityEngine;
-using UnityStandardAssets.Characters.ThirdPerson;
 using UnityEngine.AI;
 using RPG.CameraUI; // TODO Consider re-wiring
 
@@ -48,6 +47,7 @@ namespace RPG.Characters
             if(Input.GetMouseButton(0)|| Input.GetMouseButton(1)) 
             {
                 aiCharacterControl.SetTarget(enemy.transform);
+               
             }
         }
 
