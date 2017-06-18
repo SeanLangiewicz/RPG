@@ -30,6 +30,7 @@ namespace RPG.CameraUI
             }
             else
             {
+                
                 PerformRaycasts();
             }
         }
@@ -38,8 +39,14 @@ namespace RPG.CameraUI
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			// Specify layer priorities below, order matters
-			if (RaycastForEnemy(ray)) { return; }
-			if (RaycastForPotentiallyWalkable(ray)) { return; }
+			if (RaycastForEnemy(ray))
+            {
+                return;
+            }
+			if (RaycastForPotentiallyWalkable(ray))
+            {
+                return;
+            }
 		}
 
 	    bool RaycastForEnemy(Ray ray)
@@ -47,7 +54,6 @@ namespace RPG.CameraUI
             RaycastHit hitInfo;
             Physics.Raycast(ray, out hitInfo, maxRaycastDepth);
             var gameObjectHit = hitInfo.collider.gameObject;
-            print(gameObjectHit); //TODO Remove
             var enemyHit = gameObjectHit.GetComponent<Enemy>();
             if (enemyHit)
             {

@@ -17,10 +17,10 @@ namespace RPG.Characters
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float damagePerHit = 10f;
         [SerializeField] AnimatorOverrideController animatorOverrideController = null;
-        [SerializeField] Weapon weaponinUse;
+        [SerializeField] Weapon weaponinUse = null;
 
         // Temporarily serialized for debugging
-        [SerializeField] SpecialAbilityConfig ability1;
+        [SerializeField] SpecialAbilityConfig[] abilities;
 
 
         Animator animator;
@@ -43,7 +43,7 @@ namespace RPG.Characters
             SetCurrentMaxHealth();
             PutWeaponInHand();
             SetupRunTimeAnimator();
-            ability1.AddComponent(gameObject);
+            abilities[0].AttachComponentTo(gameObject);
 
         }
 
@@ -109,17 +109,17 @@ namespace RPG.Characters
 
             else if (Input.GetMouseButtonDown(1))
             {
-                AttemptSpecialAbility1(enemy);
+                AttemptSpecialAbility(0,enemy);
             }
         }
 
-        private void AttemptSpecialAbility1(Enemy enemy)
+        private void AttemptSpecialAbility(int abilityIndex, Enemy enemy)
         {
             var energyComponent = GetComponent<Energy>();
             if(energyComponent.IsEnergyAvailable(10f))//TODO read from Scriptable object
             {
                 energyComponent.CosnsumeEnergy(10f);
-                //TODO Use the ability
+                abilities[abilityIndex].Use();
             }
 
             

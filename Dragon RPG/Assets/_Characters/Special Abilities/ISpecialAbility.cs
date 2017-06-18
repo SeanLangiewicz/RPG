@@ -6,6 +6,6 @@ namespace RPG.Characters
 {
     public interface ISpecialAbility
     {
-        void use();
+        void Use();
     }
 }

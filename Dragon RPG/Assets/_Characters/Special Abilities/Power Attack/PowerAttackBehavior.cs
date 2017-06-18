@@ -25,9 +25,9 @@ namespace RPG.Characters
 
         }
         
-        public void use()
+        public void Use()
         {
-            
+            print("Power attack used");   
         }
     }
 }

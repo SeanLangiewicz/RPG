@@ -2,7 +2,7 @@
 
 public class AudioTrigger : MonoBehaviour
 {
-    [SerializeField] AudioClip clip;
+    [SerializeField] AudioClip clip = null;
     [SerializeField] int layerFilter = 0;
     [SerializeField] float triggerRadius = 5f;
     [SerializeField] bool isOneTimeOnly = true;
@@ -19,6 +19,7 @@ public class AudioTrigger : MonoBehaviour
         SphereCollider sphereCollider = gameObject.AddComponent<SphereCollider>();
         sphereCollider.isTrigger = true;
         sphereCollider.radius = triggerRadius;
+        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
     }
 
     void OnTriggerEnter(Collider other)
