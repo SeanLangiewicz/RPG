@@ -52,14 +52,15 @@ namespace RPG.Characters
             if(player.healthAsPercentage <= Mathf.Epsilon)
             {
                 StopAllCoroutines();
-                Destroy(this);
+                // To stop enemy behaviour
+                Destroy(this); 
             }
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= attackRadius && !isAttacking)
             {
                 //TODO Slow this down
                 isAttacking = true;
-                InvokeRepeating("FireProjectile", 0f, secondsBetweenShots);//TODO Switch to couroutines
+                InvokeRepeating("FireProjectile", 0f, secondsBetweenShots);
 
             }
             if (distanceToPlayer > attackRadius)
