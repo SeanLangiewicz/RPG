@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
 
 //TODO condier re-wire
 using RPG.CameraUI; 
@@ -18,10 +19,14 @@ namespace RPG.Characters
         [SerializeField] float baseDamage = 10f;
         [SerializeField] AnimatorOverrideController animatorOverrideController = null;
         [SerializeField] Weapon weaponinUse = null;
+        [SerializeField] AudioClip[] damageSounds;
+        [SerializeField]  AudioClip[] deathSounds;
+
+        AudioSource audioSource;
 
         // Temporarily serialized for debugging
         [SerializeField] SpecialAbility[] abilities = null;
-
+        
 
         Animator animator;
         float currentHealthPoints;
@@ -44,17 +49,39 @@ namespace RPG.Characters
             PutWeaponInHand();
             SetupRunTimeAnimator();
             abilities[0].AttachComponentTo(gameObject);
+            audioSource = GetComponent<AudioSource>();
 
         }
 
         public void TakeDamage(float damage)
         {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            if (currentHealthPoints <= 0)
+            ReduceHealth(damage);
+            audioSource.clip = damageSounds[UnityEngine.Random.Range(0,damageSounds.Length)];
+            audioSource.Play();
+            bool playerDies = (currentHealthPoints - damage <= 0);
+            if (playerDies)
             {
-
-                //        Destroy(gameObject);
+                StartCoroutine(KillPlayer());
             }
+
+        }
+
+        IEnumerator KillPlayer()
+        {
+
+            Debug.Log("Death sound");
+            audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+            audioSource.Play();
+            Debug.Log("Death animation");
+            yield return new WaitForSecondsRealtime(audioSource.clip.length); 
+            SceneManager.LoadScene(0);
+                     
+        }
+
+        private void ReduceHealth(float damage)
+        {
+            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
+            //Play sound
         }
 
         private void SetCurrentMaxHealth()

@@ -15,6 +15,9 @@ namespace RPG.CameraUI
         const int POTENTIALLY_WALKABLE_LAYER = 8;
         float maxRaycastDepth = 100f; // Hard coded value
 
+        
+        Rect screenRectAtStartPlay = new Rect(0, 0, Screen.width, Screen.height); //move inside to update to support screensize
+
         public delegate void OnMouseOverEnemy(Enemy enemy);
 		public event OnMouseOverEnemy onMouseOverEnemy;
 
@@ -36,18 +39,21 @@ namespace RPG.CameraUI
         }
 
         void PerformRaycasts()
-		{
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			// Specify layer priorities below, order matters
-			if (RaycastForEnemy(ray))
+        {
+            if (screenRectAtStartPlay.Contains(Input.mousePosition))
             {
-                return;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                // Specify layer priorities below, order matters
+                if (RaycastForEnemy(ray))
+                {
+                    return;
+                }
+                if (RaycastForPotentiallyWalkable(ray))
+                {
+                    return;
+                }
             }
-			if (RaycastForPotentiallyWalkable(ray))
-            {
-                return;
-            }
-		}
+        }
 
 	    bool RaycastForEnemy(Ray ray)
 		{

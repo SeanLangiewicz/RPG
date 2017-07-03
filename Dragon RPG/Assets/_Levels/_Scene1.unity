@@ -1105,6 +1105,16 @@ Prefab:
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 241458054}
+    - target: {fileID: 82632941149673020, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.162
+      objectReference: {fileID: 0}
+    - target: {fileID: 82632941149673020, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabParent: 0
@@ -1751,6 +1761,18 @@ Transform:
   m_PrefabParentObject: {fileID: 4489140927154420, guid: cdb35b1e4e9fbdf46b434c997b7fb214,
     type: 2}
   m_PrefabInternal: {fileID: 833900626}
+--- !u!1 &860469543 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1209318018752872, guid: a1d6a0aeec5aa31428bbf35cb261822d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1236865039}
+--- !u!81 &860469544
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860469543}
+  m_Enabled: 1
 --- !u!4 &865594777 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4156313870496234, guid: f7d90c4bd9faaa843b20a14d52f1bd87,

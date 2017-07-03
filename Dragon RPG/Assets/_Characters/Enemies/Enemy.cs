@@ -15,9 +15,6 @@ namespace RPG.Characters
     {
         [SerializeField] float maxHealthPoints = 100f;
         [SerializeField] float damagePerShot = 9f;
-
-
-
         [SerializeField] float secondsBetweenShots = 0.5f;
 
         [SerializeField] float chaseRaidus = 6f;
@@ -34,7 +31,7 @@ namespace RPG.Characters
 
         float currentHealthPoints;
         AICharacterControl aiCharacterControl = null;
-        GameObject player = null;
+        Player player = null;
 
         public float healthAsPercentage
         {
@@ -45,13 +42,18 @@ namespace RPG.Characters
         }
         void Start()
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = FindObjectOfType<Player>();
             aiCharacterControl = GetComponent<AICharacterControl>();
             currentHealthPoints = maxHealthPoints;
         }
 
         void Update()
         {
+            if(player.healthAsPercentage <= Mathf.Epsilon)
+            {
+                StopAllCoroutines();
+                Destroy(this);
+            }
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= attackRadius && !isAttacking)
             {
