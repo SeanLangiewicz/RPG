@@ -19,8 +19,12 @@ namespace RPG.Characters
         [SerializeField] float baseDamage = 10f;
         [SerializeField] AnimatorOverrideController animatorOverrideController = null;
         [SerializeField] Weapon weaponinUse = null;
-        [SerializeField] AudioClip[] damageSounds;
-        [SerializeField]  AudioClip[] deathSounds;
+        [SerializeField] AudioClip[] damageSounds = null;
+        [SerializeField]  AudioClip[] deathSounds = null;
+
+        const string TRIGGER_DEATH = "Death";
+        //const string DEATH_TRIGGER = "Death";
+        const string ATTACK_TRIGGER = "Attack";
 
         AudioSource audioSource;
 
@@ -55,10 +59,10 @@ namespace RPG.Characters
 
         public void TakeDamage(float damage)
         {
+            //Must ask before reducing health
+            bool playerDies = (currentHealthPoints - damage <= 0); 
             ReduceHealth(damage);
-            audioSource.clip = damageSounds[UnityEngine.Random.Range(0,damageSounds.Length)];
-            audioSource.Play();
-            bool playerDies = (currentHealthPoints - damage <= 0);
+
             if (playerDies)
             {
                 StartCoroutine(KillPlayer());
@@ -69,10 +73,10 @@ namespace RPG.Characters
         IEnumerator KillPlayer()
         {
 
-            Debug.Log("Death sound");
+            animator.SetTrigger("Death");
+            Debug.Log("Death animation");
             audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
             audioSource.Play();
-            Debug.Log("Death animation");
             yield return new WaitForSecondsRealtime(audioSource.clip.length); 
             SceneManager.LoadScene(0);
                      
@@ -81,7 +85,8 @@ namespace RPG.Characters
         private void ReduceHealth(float damage)
         {
             currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            //Play sound
+            audioSource.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
+            audioSource.Play();
         }
 
         private void SetCurrentMaxHealth()
@@ -159,7 +164,8 @@ namespace RPG.Characters
 
             if (Time.time - lastHitTime > weaponinUse.GetMinTimeBetweenHits())
             {
-                animator.SetTrigger("Attack"); // TODO Make const
+                
+                animator.SetTrigger(ATTACK_TRIGGER); 
                 enemy.TakeDamage(baseDamage);
                 lastHitTime = Time.time;
             }
