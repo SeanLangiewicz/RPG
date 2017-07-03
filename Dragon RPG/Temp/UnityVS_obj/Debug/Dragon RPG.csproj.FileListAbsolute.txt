@@ -1,0 +1,25 @@
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.PlaymodeTestsRunner.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.VR.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.PlaymodeTestsRunner.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEngine.VR.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Common.xml
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_obj\Debug\Dragon RPG.csprojResolveAssemblyReference.cache
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+C:\Users\monke\Documents\__Software Development\repos\RPG\rpg\Dragon RPG\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
