@@ -32,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 87.42694, y: 3.0031128, z: -83.23224}
+  m_LocalPosition: {x: 87.31195, y: 3.0031128, z: -83.5956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701411947613240}
@@ -848,16 +848,23 @@ MonoBehaviour:
     type: 2}
   weaponinUse: {fileID: 11400000, guid: 8a801babcf869ea4c8c68f803c062a51, type: 2}
   damageSounds:
-  - {fileID: 8300000, guid: bfb4840fc92f313429ede07f533c9d83, type: 3}
-  - {fileID: 8300000, guid: 9d0612175d848d84ea8c5a3efe26d0da, type: 3}
-  - {fileID: 8300000, guid: 8aff56faee2af054cb5f09eea9bb14bf, type: 3}
-  - {fileID: 8300000, guid: 6fd4c62d81afbca41a571083ac417794, type: 3}
-  - {fileID: 8300000, guid: 8960b2b5b9e40e84292fdc15e8da5820, type: 3}
-  - {fileID: 8300000, guid: 9f4f7196a035eb64f9e86dfd183fa134, type: 3}
+  - {fileID: 8300000, guid: 57208de251164cd40995965c1d30cd01, type: 3}
+  - {fileID: 8300000, guid: 81e3943e6b3451c49a138210ab3da524, type: 3}
+  - {fileID: 8300000, guid: d9b43e145b9ae404b889c042974694f6, type: 3}
+  - {fileID: 8300000, guid: 04d5e323125c7af45b30a8585170a79d, type: 3}
+  - {fileID: 8300000, guid: 316c4fe6999a07340be4c319652d788f, type: 3}
+  - {fileID: 8300000, guid: 2f9a88538f687fd4faac4d4ac9f4297b, type: 3}
   deathSounds:
-  - {fileID: 8300000, guid: 85cbf0073fa6b644789daf2c7648fcb4, type: 3}
-  - {fileID: 8300000, guid: 1192b90e57f4a1e4bb5cbaea55f1bda6, type: 3}
-  - {fileID: 8300000, guid: 1c60ee534898ca04582cb6ddaf0652c7, type: 3}
+  - {fileID: 8300000, guid: 098b4046feea1994fadfeb4f55212afa, type: 3}
+  - {fileID: 8300000, guid: 7f4fb177785cdf64db08b6fe783c4cb2, type: 3}
+  - {fileID: 8300000, guid: b058823c0aff7104786c3c18cbe53cfd, type: 3}
+  - {fileID: 8300000, guid: 6c167fc99303eac469210f014bbac6ef, type: 3}
+  - {fileID: 8300000, guid: 4b387ee8771af464ab997d619965b142, type: 3}
+  - {fileID: 8300000, guid: 33279b2fd8fbb524bacd3e7d424bfa04, type: 3}
+  - {fileID: 8300000, guid: 2246a5ef33947ab4c8f74cd915dd676f, type: 3}
+  - {fileID: 8300000, guid: d060cd34ad799df4282f0fb199cb807f, type: 3}
+  - {fileID: 8300000, guid: faefe9fda4da69c4cbb194a6ae72ec71, type: 3}
+  - {fileID: 8300000, guid: bf0527976e120b043a3159a7e580d5fd, type: 3}
   abilities:
   - {fileID: 11400000, guid: 8564a98640a93f443860d8fe43814eee, type: 2}
   - {fileID: 11400000, guid: 46372ec822fd91a438adade46b5add9e, type: 2}
