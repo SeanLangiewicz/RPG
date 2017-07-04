@@ -7,6 +7,8 @@ using RPG.Core;
 public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 {
     AreaEffectConfig config;
+   
+
 
 
     public void SetConfig(AreaEffectConfig configToSet)
@@ -17,7 +19,9 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 	// Use this for initialization
 	void Start ()
     {
+       
         //print("Area Effect behavior attached to " + gameObject.name);
+
     }
 	
 	public void Use(AbilityUseParams useParams)
@@ -33,6 +37,7 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
             if(damageable != null)
             {
                 float damageToDeal = useParams.baseDamage + config.GetDamageToEachTarget();//TODO is this right ?
+               
                 damageable.TakeDamage(damageToDeal);
             }
         }

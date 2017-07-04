@@ -74,10 +74,13 @@ namespace RPG.Characters
         {
 
             animator.SetTrigger("Death");
+            GetComponent<AICharacterControl>().enabled = false;
+            Debug.Log("movement disabled");
             Debug.Log("Death animation");
             audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
             audioSource.Play();
-            yield return new WaitForSecondsRealtime(audioSource.clip.length); 
+            yield return new WaitForSecondsRealtime(audioSource.clip.length +3);
+           
             SceneManager.LoadScene(0);
                      
         }
@@ -140,6 +143,7 @@ namespace RPG.Characters
             }
 
             else if (Input.GetMouseButtonDown(1))
+                
             {
                 AttemptSpecialAbility(0,enemy);
             }
