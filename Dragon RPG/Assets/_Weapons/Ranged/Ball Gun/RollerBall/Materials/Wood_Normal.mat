@@ -6,15 +6,21 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: RollerBallWhite
+  m_Name: Wood_Normal
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
+    - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -71,6 +77,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: <noninit>
+      second: 0
+    - first:
+        name: PixelSnap
+      second: 0
+    - first:
         name: _BumpScale
       second: 1
     - first:
@@ -120,8 +132,11 @@ Material:
       second: 1
     m_Colors:
     - first:
+        name: <noninit>
+      second: {r: 0, g: 3.9066937e+33, b: 0, a: 3.9066738e+33}
+    - first:
         name: _Color
-      second: {r: 0.98496985, g: 0.89076066, b: 0.7724422, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

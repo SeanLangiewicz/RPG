@@ -130,7 +130,7 @@ Material:
     m_Colors:
     - first:
         name: <noninit>
-      second: {r: 0, g: 65532190, b: 0, a: 65531936}
+      second: {r: 0, g: 3.743038e+33, b: 0, a: 3.7430182e+33}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
