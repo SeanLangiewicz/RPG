@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7058baa7064c8f4daf099e55992a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 50000
+  maxHealthPoints: 200
   baseDamage: 10
   animatorOverrideController: {fileID: 22100000, guid: 99dc9841784b7b24bb7be1cb6f175fee,
     type: 2}
@@ -2112,8 +2112,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: faefe9fda4da69c4cbb194a6ae72ec71, type: 3}
   - {fileID: 8300000, guid: bf0527976e120b043a3159a7e580d5fd, type: 3}
   abilities:
-  - {fileID: 11400000, guid: 8564a98640a93f443860d8fe43814eee, type: 2}
   - {fileID: 11400000, guid: 46372ec822fd91a438adade46b5add9e, type: 2}
+  - {fileID: 11400000, guid: 8564a98640a93f443860d8fe43814eee, type: 2}
+  - {fileID: 11400000, guid: 0dd9f54bb6a810c4ba2f997ebebd1fa8, type: 2}
 --- !u!137 &137576735633162268
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

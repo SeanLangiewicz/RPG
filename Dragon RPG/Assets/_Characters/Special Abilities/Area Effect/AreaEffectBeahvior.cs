@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using RPG.Characters;
 using RPG.Core;
+using System;
 
 public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 {
     AreaEffectConfig config;
+    
    
-
-
-
     public void SetConfig(AreaEffectConfig configToSet)
     {
         this.config = configToSet;
@@ -20,30 +17,41 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 	void Start ()
     {
        
-        //print("Area Effect behavior attached to " + gameObject.name);
+        print("Area Effect behavior attached to " + gameObject.name);
 
     }
 	
 	public void Use(AbilityUseParams useParams)
     {
+        DealRadialDamage(useParams);
+        PlayParticleEffect();
+    }
+
+    private void PlayParticleEffect()
+    {
+       // TODO decide if particle system attaches to player 
+        var prefab = Instantiate(config.GetParticlePreFab(), transform.position, Quaternion.identity);
+       ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
+        myParticleSystem.Play();
+        Destroy(prefab, myParticleSystem.main.duration);
+    }
+
+    private void DealRadialDamage(AbilityUseParams useParams)
+    {
         print("Area Effect used by  " + gameObject.name);
         //Static spehere cast for targets
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position,config.GetRadius(),Vector3.up,config.GetRadius());
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, config.GetRadius(), Vector3.up, config.GetRadius());
         //for each hit
 
-        foreach(RaycastHit hit in hits)
+        foreach (RaycastHit hit in hits)
         {
             var damageable = hit.collider.gameObject.GetComponent<IDamageable>();
-            if(damageable != null)
+            if (damageable != null)
             {
                 float damageToDeal = useParams.baseDamage + config.GetDamageToEachTarget();//TODO is this right ?
-               
-                damageable.TakeDamage(damageToDeal);
+
+                damageable.AdjustHealth(damageToDeal);
             }
         }
-            //if damage
-                //Deal damage to target + player base damage\
-            
-       
     }
 }

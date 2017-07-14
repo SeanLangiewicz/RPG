@@ -84,7 +84,7 @@ namespace RPG.Characters
 
         }
 
-        public void TakeDamage(float damage)
+        public void AdjustHealth(float damage)
         {
             currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
             if (currentHealthPoints <= 0)

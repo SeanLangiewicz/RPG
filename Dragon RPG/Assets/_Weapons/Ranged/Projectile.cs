@@ -53,7 +53,7 @@ namespace RPG.Weapons
 
             if (damageableComponent)
             {
-                (damageableComponent as IDamageable).TakeDamage(damageCaused);
+                (damageableComponent as IDamageable).AdjustHealth(damageCaused);
             }
             Destroy(gameObject, DESTORY_DELAY);
         }
