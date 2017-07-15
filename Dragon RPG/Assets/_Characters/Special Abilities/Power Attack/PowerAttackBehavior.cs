@@ -8,6 +8,7 @@ namespace RPG.Characters
     public class PowerAttackBehavior : MonoBehaviour, ISpecialAbility
     {
         PowerAttackConfig config;
+        AudioSource audioSource = null;
 
         public void SetConfig(PowerAttackConfig configToSet)
         {
@@ -16,7 +17,7 @@ namespace RPG.Characters
         // Use this for initialization
         void Start()
         {
-            print("Power attack behavior attached to " + gameObject.name);
+           
             
         }
 
@@ -30,12 +31,14 @@ namespace RPG.Characters
         {
             DealDamage(useParams);
             PlayParticleEffect();
+            audioSource.clip = config.GetAudioClip();
+            audioSource.Play();
         }
 
         private void PlayParticleEffect()
         {
-            // TODO decide if particle system attaches to player 
             var prefab = Instantiate(config.GetParticlePreFab(), transform.position, Quaternion.identity);
+            // TODO decide if particle system attaches to player 
             ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
             myParticleSystem.Play();
             Destroy(prefab, myParticleSystem.main.duration);
@@ -43,9 +46,9 @@ namespace RPG.Characters
 
         private void DealDamage(AbilityUseParams useParams)
         {
-            print("Power Attack used by:" + gameObject.name);
+            
             float damageToDeal = useParams.baseDamage + config.GetExtraDamage();
-            useParams.target.AdjustHealth(damageToDeal);
+            useParams.target.TakeDamage(damageToDeal);
         }
     }
 }

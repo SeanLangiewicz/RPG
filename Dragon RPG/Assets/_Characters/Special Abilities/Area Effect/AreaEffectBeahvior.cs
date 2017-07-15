@@ -6,6 +6,7 @@ using System;
 public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 {
     AreaEffectConfig config;
+    AudioSource audioSource = null;
     
    
     public void SetConfig(AreaEffectConfig configToSet)
@@ -16,8 +17,8 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 	// Use this for initialization
 	void Start ()
     {
-       
-        print("Area Effect behavior attached to " + gameObject.name);
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 	
@@ -25,6 +26,8 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
     {
         DealRadialDamage(useParams);
         PlayParticleEffect();
+        audioSource.clip = config.GetAudioClip();
+        audioSource.Play();
     }
 
     private void PlayParticleEffect()
@@ -38,7 +41,7 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 
     private void DealRadialDamage(AbilityUseParams useParams)
     {
-        print("Area Effect used by  " + gameObject.name);
+       
         //Static spehere cast for targets
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, config.GetRadius(), Vector3.up, config.GetRadius());
         //for each hit
@@ -46,11 +49,12 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
         foreach (RaycastHit hit in hits)
         {
             var damageable = hit.collider.gameObject.GetComponent<IDamageable>();
-            if (damageable != null)
+            bool hitPlayer = hit.collider.gameObject.GetComponent <Player>();
+            if (damageable != null && !hitPlayer)
             {
                 float damageToDeal = useParams.baseDamage + config.GetDamageToEachTarget();//TODO is this right ?
 
-                damageable.AdjustHealth(damageToDeal);
+                damageable.TakeDamage(damageToDeal);
             }
         }
     }
