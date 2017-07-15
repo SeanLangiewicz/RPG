@@ -9,13 +9,18 @@ namespace RPG.Weapons
     public class Weapon : ScriptableObject
     {
 
-        [SerializeField] float minTimeBetweenHits = .5f;
-        [SerializeField] float maxAttackRange = 2f;
+        [Header("General Configuration")]
         [SerializeField] GameObject weaponPrefab = null;
         [SerializeField] AnimationClip attackAnimation = null;
-
-
         public Transform gripTransform;
+
+
+        [Header("Damage Tuning")]
+        [SerializeField] float additionalDamage = 10f;
+        [SerializeField] float minTimeBetweenHits = .5f;
+        [SerializeField] float maxAttackRange = 2f;
+
+
 
         public float GetMinTimeBetweenHits()
         {
@@ -37,6 +42,10 @@ namespace RPG.Weapons
         {
             RemoveAnimationEvents();
             return attackAnimation;
+        }
+        public float GetAdditionalDamage()
+        {
+            return additionalDamage;
         }
 
         // So that asset packs cannot cause crashes.
