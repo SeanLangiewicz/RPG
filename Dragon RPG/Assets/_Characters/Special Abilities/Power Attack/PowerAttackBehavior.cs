@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RPG.Characters
 {
-    public class PowerAttackBehavior : MonoBehaviour, ISpecialAbility
+    public class PowerAttackBehavior : Abilitybehavior
     {
         PowerAttackConfig config;
         AudioSource audioSource = null;
@@ -27,7 +27,7 @@ namespace RPG.Characters
 
         }
         
-        public void Use(AbilityUseParams useParams)
+        public override void Use(AbilityUseParams useParams)
         {
             DealDamage(useParams);
             PlayParticleEffect();

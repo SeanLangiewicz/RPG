@@ -25,7 +25,7 @@ namespace RPG.Characters
         [SerializeField] GameObject particlePrefab = null;
         [SerializeField] AudioClip audioClip = null;
 
-        protected ISpecialAbility behavior;
+        protected Abilitybehavior behavior;
 
        
 
@@ -50,8 +50,5 @@ namespace RPG.Characters
         }
 
     }
-    public interface ISpecialAbility
-    {
-        void Use(AbilityUseParams useParams);
-    }
+   
 }

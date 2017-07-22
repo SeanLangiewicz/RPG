@@ -3,7 +3,7 @@ using RPG.Characters;
 using RPG.Core;
 using System;
 
-public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
+public class AreaEffectBeahvior : Abilitybehavior
 {
     AreaEffectConfig config;
     AudioSource audioSource = null;
@@ -22,7 +22,7 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 
     }
 	
-	public void Use(AbilityUseParams useParams)
+	public override void Use(AbilityUseParams useParams)
     {
         DealRadialDamage(useParams);
         PlayParticleEffect();
@@ -32,8 +32,9 @@ public class AreaEffectBeahvior : MonoBehaviour , ISpecialAbility
 
     private void PlayParticleEffect()
     {
-       // TODO decide if particle system attaches to player 
-        var prefab = Instantiate(config.GetParticlePreFab(), transform.position, Quaternion.identity);
+        // TODO decide if particle system attaches to player 
+        var particlePrefab = config.GetParticlePreFab();
+        var prefab = Instantiate(particlePrefab, transform.position, particlePrefab.transform.rotation);
        ParticleSystem myParticleSystem = prefab.GetComponent<ParticleSystem>();
         myParticleSystem.Play();
         Destroy(prefab, myParticleSystem.main.duration);

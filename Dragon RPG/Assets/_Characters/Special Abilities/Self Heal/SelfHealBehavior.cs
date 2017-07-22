@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Characters
 {
-    public class SelfHealBehavior : MonoBehaviour, ISpecialAbility
+    public class SelfHealBehavior : Abilitybehavior
     {
         SelfHealConfig config = null;
         Player player = null;
@@ -29,7 +29,7 @@ namespace RPG.Characters
         }
 
        
-        public void Use(AbilityUseParams useParams)
+        public override void Use(AbilityUseParams useParams)
         {
 
 

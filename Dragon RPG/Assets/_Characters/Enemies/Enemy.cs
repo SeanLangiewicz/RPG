@@ -13,24 +13,27 @@ namespace RPG.Characters
 
     public class Enemy : MonoBehaviour, IDamageable
     {
+        [Header("Base Stats")]
         [SerializeField] float maxHealthPoints = 100f;
+
+        [Header("Damage Tuning")]
         [SerializeField] float damagePerShot = 9f;
-        // Firing period in seconds
         [SerializeField] float firingPeriodInS = 0.5f;
-        // Firing variations
         [SerializeField] float firingPeriodV = 0.1f;
 
+        [Header("Chase / Attack ")]
         [SerializeField] float chaseRaidus = 6f;
         [SerializeField] float attackRadius = 6f;
 
-
+        [Header("Projectile")]
         [SerializeField] Vector3 aimOffset = new Vector3(0, 1f, 0);
-
-
         [SerializeField] GameObject projectileToUse = null;
         [SerializeField] GameObject projectileSocket = null;
 
         bool isAttacking = false;
+
+        const string TRIGGER_DEATH = "Death";
+        Animator animator = null;
 
         float currentHealthPoints;
         AICharacterControl aiCharacterControl = null;
@@ -89,6 +92,7 @@ namespace RPG.Characters
             currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
             if (currentHealthPoints <= 0)
             {
+               
                 Destroy(gameObject);
             }
         }

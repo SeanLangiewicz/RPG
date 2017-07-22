@@ -16,9 +16,9 @@ namespace RPG.Weapons
 
 
         [Header("Damage Tuning")]
-        [SerializeField] float additionalDamage = 10f;
         [SerializeField] float minTimeBetweenHits = .5f;
         [SerializeField] float maxAttackRange = 2f;
+        [SerializeField] float additionalDamage = 10f;
 
 
 
