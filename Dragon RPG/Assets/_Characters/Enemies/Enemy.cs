@@ -33,7 +33,7 @@ namespace RPG.Characters
         Animator animator = null;
 
         float currentHealthPoints;
-        AICharacterControl aiCharacterControl = null;
+ 
         Player player = null;
 
         public float healthAsPercentage
@@ -46,7 +46,7 @@ namespace RPG.Characters
         void Start()
         {
             player = FindObjectOfType<Player>();
-            aiCharacterControl = GetComponent<AICharacterControl>();
+          
             currentHealthPoints = maxHealthPoints;
         }
 
@@ -74,12 +74,12 @@ namespace RPG.Characters
             }
             if (distanceToPlayer <= chaseRaidus)
             {
-                aiCharacterControl.SetTarget(player.transform);
+               // aiCharacterControl.SetTarget(player.transform);
 
             }
             else
             {
-                aiCharacterControl.SetTarget(transform);
+               // aiCharacterControl.SetTarget(transform);
             }
 
         }

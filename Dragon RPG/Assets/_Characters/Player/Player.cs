@@ -145,7 +145,6 @@ namespace RPG.Characters
         {
 
             animator.SetTrigger("Death");
-            GetComponent<AICharacterControl>().enabled = false;
             Debug.Log("movement disabled");
             Debug.Log("Death animation");
             audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
