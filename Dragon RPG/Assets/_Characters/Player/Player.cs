@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 //TODO condier re-wire
 using RPG.CameraUI; 
 using RPG.Core; 
-using RPG.Weapons; 
+
 
 namespace RPG.Characters
 {
@@ -25,7 +25,7 @@ namespace RPG.Characters
         [SerializeField] ParticleSystem criticalHitParticle = null;
 
         [Header("Weapon In Use")]
-        [SerializeField] Weapon weaponinUse = null;
+        [SerializeField] Weapon currentWeaponConfig = null;
 
         [Header("Animation Controller")]
         [SerializeField] AnimatorOverrideController animatorOverrideController = null;
@@ -45,16 +45,18 @@ namespace RPG.Characters
 
         const string TRIGGER_DEATH = "Death";
         const string ATTACK_TRIGGER = "Attack";
+        const string DEFAULT_ATTACK = "DEFAULT_ATTACK";
 
 
-       
+
         Enemy enemy = null;
         AudioSource audioSource = null;
         Animator animator = null;
         float currentHealthPoints = 0;
         CameraRaycaster cameraRayCaster = null;
-
         float lastHitTime = 0;
+
+        GameObject weaponObject;
 
         public float healthAsPercentage
         {
@@ -71,17 +73,26 @@ namespace RPG.Characters
 
             RegisterForMouseClick();
             SetCurrentMaxHealth();
-            PutWeaponInHand();
-            SetupRunTimeAnimator();
+            PutWeaponInHand(currentWeaponConfig);
+            SetAttackAnimation();
             AttachInitialAbilities();
             
            
 
         }
 
-        public void PutWeaponInHand (Weapon weaponConfig)
+        public void PutWeaponInHand (Weapon weaponToUse)
         {
-            print("Putting weapon in hand:" + weaponConfig);
+            currentWeaponConfig = weaponToUse;
+            var weaponPrefab = weaponToUse.GetWeaponPreFab();
+            GameObject weaponSocket = RequestDominantHand();
+            //Empty hand
+            Destroy(weaponObject);
+            weaponObject = Instantiate(weaponPrefab, weaponSocket.transform);
+            weaponObject.transform.localPosition = currentWeaponConfig.gripTransform.localPosition;
+            weaponObject.transform.localRotation = currentWeaponConfig.gripTransform.localRotation;
+
+           
         }
 
         private void AttachInitialAbilities()
@@ -152,24 +163,11 @@ namespace RPG.Characters
             currentHealthPoints = maxHealthPoints;
         }
 
-        private void SetupRunTimeAnimator()
+        private void SetAttackAnimation()
         {
             animator = GetComponent<Animator>();
             animator.runtimeAnimatorController = animatorOverrideController;
-            animatorOverrideController["DEFAULT ATTACK"] = weaponinUse.GetAnimClip(); // remove constant
-        }
-
-        private void PutWeaponInHand()
-        {
-
-            var weaponPrefab = weaponinUse.GetWeaponPreFab();
-            GameObject weaponSocket = RequestDominantHand();
-            var weapon = Instantiate(weaponPrefab, weaponSocket.transform);
-            weapon.transform.localPosition = weaponinUse.gripTransform.localPosition;
-            weapon.transform.localRotation = weaponinUse.gripTransform.localRotation;
-
-
-
+            animatorOverrideController[DEFAULT_ATTACK] = currentWeaponConfig.GetAnimClip(); // remove constant
         }
 
         private GameObject RequestDominantHand()
@@ -222,9 +220,9 @@ namespace RPG.Characters
         private void AttackTarget()
         {
 
-            if (Time.time - lastHitTime > weaponinUse.GetMinTimeBetweenHits())
+            if (Time.time - lastHitTime > currentWeaponConfig.GetMinTimeBetweenHits())
             {
-
+                SetAttackAnimation();
                 animator.SetTrigger(ATTACK_TRIGGER);
                 enemy.TakeDamage(CalculateDamage());
                
@@ -235,7 +233,7 @@ namespace RPG.Characters
         private float CalculateDamage()
         {
             bool isCriticalHit = UnityEngine.Random.Range(0f, 1f) <= criticalHitChance;
-            float damageBeforeCritical = baseDamage + weaponinUse.GetAdditionalDamage();
+            float damageBeforeCritical = baseDamage + currentWeaponConfig.GetAdditionalDamage();
             if(isCriticalHit)
             {
                 criticalHitParticle.Play();
@@ -251,7 +249,7 @@ namespace RPG.Characters
         private bool IsTargetInRange(GameObject target)
         {
             float distanceToTarget = (target.transform.position - transform.position).magnitude;
-            return distanceToTarget <= weaponinUse.GetMaxAttackRange();
+            return distanceToTarget <= currentWeaponConfig.GetMaxAttackRange();
             
         }
 

@@ -32,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.435242, y: 0, z: 5.2087555}
+  m_LocalPosition: {x: 87.31195, y: 3.0031128, z: -83.5956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4345053191745392}
@@ -2119,12 +2119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7058baa7064c8f4daf099e55992a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 300
+  maxHealthPoints: 5000
   baseDamage: 10
   criticalHitChance: 0.1
   criticatHitMultiplier: 1.25
   criticalHitParticle: {fileID: 198939998596499364}
-  weaponinUse: {fileID: 11400000, guid: 8a801babcf869ea4c8c68f803c062a51, type: 2}
+  currentWeaponConfig: {fileID: 11400000, guid: 8a801babcf869ea4c8c68f803c062a51,
+    type: 2}
   animatorOverrideController: {fileID: 22100000, guid: 99dc9841784b7b24bb7be1cb6f175fee,
     type: 2}
   damageSounds:

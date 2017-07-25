@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-using RPG.Weapons; // consider re-wire
 using RPG.Core; // Condier re-wire
 
 namespace RPG.Characters
