@@ -79,11 +79,16 @@ namespace RPG.Characters
 
         }
 
+        public void PutWeaponInHand (Weapon weaponConfig)
+        {
+            print("Putting weapon in hand:" + weaponConfig);
+        }
+
         private void AttachInitialAbilities()
         {
             for(int abilityIndex =0;abilityIndex < abilities.Length;abilityIndex++)
             {
-                abilities[abilityIndex].AttachComponentTo(gameObject);
+                abilities[abilityIndex].AttachAbilityTo(gameObject);
             }
             
         }
