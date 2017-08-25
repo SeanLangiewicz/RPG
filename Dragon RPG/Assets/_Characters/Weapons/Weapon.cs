@@ -56,7 +56,14 @@ namespace RPG.Characters
         {
             attackAnimation.events = new AnimationEvent[0];
         }
+
+        public void attackDamage(float damageAttack)
+        {
+
+        }
     }
+
+   
 
    
 
