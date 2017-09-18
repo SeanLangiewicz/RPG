@@ -6,10 +6,10 @@ using System;
 public class AreaEffectBeahvior : Abilitybehavior
 {
 	
-	public override void Use(AbilityUseParams useParams)
+	public override void Use(GameObject target)
     {
         PlayAbilitySound();
-        DealRadialDamage(useParams);
+        DealRadialDamage();
         PlayParticleEffect();
 
        
@@ -17,7 +17,7 @@ public class AreaEffectBeahvior : Abilitybehavior
 
     
 
-    private void DealRadialDamage(AbilityUseParams useParams)
+    private void DealRadialDamage()
     {
        
         //Static spehere cast for targets
@@ -26,11 +26,11 @@ public class AreaEffectBeahvior : Abilitybehavior
 
         foreach (RaycastHit hit in hits)
         {
-            var damageable = hit.collider.gameObject.GetComponent<IDamageable>();
+            var damageable = hit.collider.gameObject.GetComponent<HealthSystem>();
             bool hitPlayer = hit.collider.gameObject.GetComponent <Player>();
             if (damageable != null && !hitPlayer)
             {
-                float damageToDeal = useParams.baseDamage + (config as AreaEffectConfig).GetDamageToEachTarget();//TODO is this right ?
+                float damageToDeal = (config as AreaEffectConfig).GetDamageToEachTarget();
 
                 damageable.TakeDamage(damageToDeal);
             }

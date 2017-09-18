@@ -8,7 +8,7 @@ namespace RPG.Characters
 
 {
 
-    public class Enemy : MonoBehaviour, IDamageable // TODO remove interface
+    public class Enemy : MonoBehaviour
     {
         [Header("Base Stats")]
         [SerializeField] float maxHealthPoints = 100f;
