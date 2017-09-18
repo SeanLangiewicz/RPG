@@ -9,7 +9,6 @@ namespace RPG.Characters
     {
         [SerializeField]        float movingTurnSpeed = 360;
         [SerializeField]        float stationaryTurnSpeed = 180;
-        [SerializeField]       float runCycleLegOffSet = 0.2f; //specific to the character in sample assets, will need to be modified to work with others
         [SerializeField]        float m_AnimSpeedMultiplier = 1f;
        
 
@@ -61,17 +60,7 @@ namespace RPG.Characters
             // update the animator parameters
             myAnimator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime); //TODO Check if this can be removed
             myAnimator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime); //TODO Check if this can be removed
-
-           
-
-            // calculate which leg is behind, so as to leave that leg trailing in the jump animation
-            // (This code is reliant on the specific run cycle offset in our animations,
-            // and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
-            float runCycle =
-                Mathf.Repeat(
-                    myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime + runCycleLegOffSet, 1);
-
-           
+          
         }       
 
         void ApplyExtraTurnRotation()
