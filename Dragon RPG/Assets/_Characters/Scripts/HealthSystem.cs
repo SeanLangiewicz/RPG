@@ -11,11 +11,12 @@ namespace RPG.Characters
     {
 
 
-        [SerializeField]      float maxHealthPoints = 100f;
-        [SerializeField]      Image healthBar;
+        [SerializeField]     float maxHealthPoints = 100f;
+        [SerializeField]     Image healthBar;
+        [SerializeField]     float deathVanishSeconds = 2.0f;
         [SerializeField]     AudioClip[] damageSounds = null;
-        [SerializeField]      AudioClip[] deathSounds = null;
-        [SerializeField]      float deathVanishSeconds = 2.0f;
+        [SerializeField]     AudioClip[] deathSounds = null;
+    
     
 
         const string TRIGGER_DEATH = "Death";

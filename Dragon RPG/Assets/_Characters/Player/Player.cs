@@ -32,17 +32,6 @@ namespace RPG.Characters
         
 
        
-        
-
-      
-
-
-     
-
-        // Temporarily serialized for debugging
-        [Header("Player Abilities(Remove Later)")] [SerializeField] AbilityConfig[] abilities = null;
-
-       
         const string ATTACK_TRIGGER = "Attack";
         const string DEFAULT_ATTACK = "DEFAULT_ATTACK";
 
@@ -51,6 +40,7 @@ namespace RPG.Characters
         Enemy enemy = null;
         AudioSource audioSource = null;
         Animator animator = null;
+        SpecialAbilities abilities;
        
         CameraRaycaster cameraRayCaster = null;
         float lastHitTime = 0;
@@ -61,12 +51,12 @@ namespace RPG.Characters
 
         public void Start()
         {
-                     
+            abilities = GetComponent<SpecialAbilities>();    
 
             RegisterForMouseClick();
             PutWeaponInHand(currentWeaponConfig);
             SetAttackAnimation();
-            AttachInitialAbilities();
+
             
            
 
@@ -86,15 +76,6 @@ namespace RPG.Characters
            
         }
 
-        private void AttachInitialAbilities()
-        {
-            for(int abilityIndex =0;abilityIndex < abilities.Length;abilityIndex++)
-            {
-                abilities[abilityIndex].AttachAbilityTo(gameObject);
-            }
-            
-        }
-
         public void Update()
         {
             var healthPercentage = GetComponent<HealthSystem>().healthAsPercentage;
@@ -106,11 +87,11 @@ namespace RPG.Characters
 
         private void ScanForAbilityKeyDown()
         {
-            for(int keyIndex =1; keyIndex <abilities.Length; keyIndex++)
+            for(int keyIndex =1; keyIndex < abilities.GetNumberOfAbilities(); keyIndex++)
             {
                 if(Input.GetKeyDown(keyIndex.ToString()))
                     {
-                    AttemptSpecialAbility(keyIndex);
+                        abilities.AttemptSpecialAbility(keyIndex);
                     }
             }
         }
@@ -153,23 +134,10 @@ namespace RPG.Characters
             else if (Input.GetMouseButtonDown(1))
                 
             {
-                AttemptSpecialAbility(0);
+               abilities.AttemptSpecialAbility(0);
             }
         }
 
-        private void AttemptSpecialAbility(int abilityIndex)
-        {
-            var energyComponent = GetComponent<Energy>();
-            var energyCost = abilities[abilityIndex].GetEnergyCost();
-            if(energyComponent.IsEnergyAvailable(energyCost))//TODO read from Scriptable object
-            {
-                energyComponent.CosnsumeEnergy(energyCost);
-                var abilityParams = new AbilityUseParams(enemy, baseDamage);
-                abilities[abilityIndex].Use(abilityParams);
-            }
-
-            
-        }
 
         private void AttackTarget()
         {
