@@ -34,12 +34,12 @@ namespace RPG.Characters
 
         float currentHealthPoints;
  
-        Player player = null;
+        PlayerMovement player = null;
 
      
         void Start()
         {
-            player = FindObjectOfType<Player>();
+            player = FindObjectOfType<PlayerMovement>();
           
             currentHealthPoints = maxHealthPoints;
         }

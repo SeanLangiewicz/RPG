@@ -7,14 +7,14 @@ namespace RPG.Characters
     public class SelfHealBehavior : Abilitybehavior
     {
        
-        Player player = null;
+        PlayerMovement player = null;
        
        
 
         // Use this for initialization
         void Start()
         {
-            player = GetComponent<Player>();
+            player = GetComponent<PlayerMovement>();
             
         }
 
