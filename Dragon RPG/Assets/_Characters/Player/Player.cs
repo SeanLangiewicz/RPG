@@ -13,10 +13,10 @@ using RPG.Core;
 namespace RPG.Characters
 {
 
-    public class Player : MonoBehaviour, IDamageable
+    public class Player : MonoBehaviour
     {
-        [Header("General Stats")]
-        [SerializeField] float maxHealthPoints = 100f;
+        
+       
         [SerializeField] float baseDamage = 10f;
 
         [Header("Critical Hit System")]
@@ -31,9 +31,8 @@ namespace RPG.Characters
         [SerializeField] AnimatorOverrideController animatorOverrideController = null;
         
 
-        [Header("Player Sounds")]
-        [SerializeField] AudioClip[] damageSounds = null;
-        [SerializeField]  AudioClip[] deathSounds = null;
+       
+        
 
       
 
@@ -43,7 +42,7 @@ namespace RPG.Characters
         // Temporarily serialized for debugging
         [Header("Player Abilities(Remove Later)")] [SerializeField] AbilityConfig[] abilities = null;
 
-        const string TRIGGER_DEATH = "Death";
+       
         const string ATTACK_TRIGGER = "Attack";
         const string DEFAULT_ATTACK = "DEFAULT_ATTACK";
 
@@ -52,27 +51,19 @@ namespace RPG.Characters
         Enemy enemy = null;
         AudioSource audioSource = null;
         Animator animator = null;
-        float currentHealthPoints = 0;
+       
         CameraRaycaster cameraRayCaster = null;
         float lastHitTime = 0;
 
         GameObject weaponObject;
 
-        public float healthAsPercentage
-        {
-            get
-            {
-                return currentHealthPoints / (float)maxHealthPoints;
-            }
-        }
+        
 
         public void Start()
         {
-            audioSource = GetComponent<AudioSource>();
-            
+                     
 
             RegisterForMouseClick();
-            SetCurrentMaxHealth();
             PutWeaponInHand(currentWeaponConfig);
             SetAttackAnimation();
             AttachInitialAbilities();
@@ -106,7 +97,8 @@ namespace RPG.Characters
 
         public void Update()
         {
-             if (healthAsPercentage >Mathf.Epsilon)
+            var healthPercentage = GetComponent<HealthSystem>().healthAsPercentage;
+             if (healthPercentage >Mathf.Epsilon)
             {
                 ScanForAbilityKeyDown();
             }
@@ -123,44 +115,7 @@ namespace RPG.Characters
             }
         }
 
-        public void TakeDamage(float damage)
-        {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            audioSource.clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
-            audioSource.Play();
-            
-            if (currentHealthPoints <= 0)
-            {
-                StartCoroutine(KillPlayer());
-            }
 
-        }
-        public void Heal (float points)
-        {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints + points, 0f, maxHealthPoints);
-        }
-
-
-        IEnumerator KillPlayer()
-        {
-
-            animator.SetTrigger("Death");
-            Debug.Log("movement disabled");
-            Debug.Log("Death animation");
-            audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
-            audioSource.Play();
-            yield return new WaitForSecondsRealtime(audioSource.clip.length +3);
-           
-            SceneManager.LoadScene(0);
-                     
-        }
-
-
-
-        private void SetCurrentMaxHealth()
-        {
-            currentHealthPoints = maxHealthPoints;
-        }
 
         private void SetAttackAnimation()
         {

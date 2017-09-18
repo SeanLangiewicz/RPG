@@ -8,7 +8,7 @@ namespace RPG.Characters
 
 {
 
-    public class Enemy : MonoBehaviour, IDamageable
+    public class Enemy : MonoBehaviour, IDamageable // TODO remove interface
     {
         [Header("Base Stats")]
         [SerializeField] float maxHealthPoints = 100f;
@@ -36,13 +36,7 @@ namespace RPG.Characters
  
         Player player = null;
 
-        public float healthAsPercentage
-        {
-            get
-            {
-                return currentHealthPoints / (float)maxHealthPoints;
-            }
-        }
+     
         void Start()
         {
             player = FindObjectOfType<Player>();
@@ -50,14 +44,13 @@ namespace RPG.Characters
             currentHealthPoints = maxHealthPoints;
         }
 
+        public void TakeDamage( float amount)
+        {
+            //TODO remove
+        }
+
         void Update()
         {
-            if(player.healthAsPercentage <= Mathf.Epsilon)
-            {
-                StopAllCoroutines();
-                // To stop enemy behaviour
-                Destroy(this); 
-            }
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
             if (distanceToPlayer <= attackRadius && !isAttacking)
             {
@@ -84,15 +77,7 @@ namespace RPG.Characters
 
         }
 
-        public void TakeDamage(float damage)
-        {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
-            if (currentHealthPoints <= 0)
-            {
-               
-                Destroy(gameObject);
-            }
-        }
+        
         // TODO separate out character firing logic
         void FireProjectile()
         {

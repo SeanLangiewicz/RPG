@@ -464,10 +464,8 @@ GameObject:
   - component: {fileID: 95069995508222548}
   - component: {fileID: 54578342054512420}
   - component: {fileID: 136333062328046606}
-  - component: {fileID: 114837596762062088}
   - component: {fileID: 114608765461835936}
   - component: {fileID: 195401884285287272}
-  - component: {fileID: 114823751910627928}
   m_Layer: 9
   m_Name: Minion
   m_TagString: Untagged
@@ -1741,6 +1739,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23268501501209128
 MeshRenderer:
@@ -1772,6 +1771,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23320795779685194
 MeshRenderer:
@@ -1803,6 +1803,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23567322513436284
 MeshRenderer:
@@ -1834,6 +1835,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23877363236066326
 MeshRenderer:
@@ -1865,6 +1867,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33243723684802892
 MeshFilter:
@@ -1967,37 +1970,6 @@ MonoBehaviour:
   projectileToUse: {fileID: 1251516618048952, guid: 163b9e566a4756749b547328b07e828a,
     type: 2}
   projectileSocket: {fileID: 1626539630543324}
---- !u!114 &114823751910627928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1542877400523496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4248261551897112, guid: 163b9e566a4756749b547328b07e828a, type: 2}
---- !u!114 &114837596762062088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1542877400523496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1000
-  m_StationaryTurnSpeed: 800
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 0.5
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 11.5
 --- !u!136 &136333062328046606
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2041,6 +2013,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -2110,6 +2083,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1542877400523496}
   m_Enabled: 1
+  m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 10
   m_Acceleration: 8

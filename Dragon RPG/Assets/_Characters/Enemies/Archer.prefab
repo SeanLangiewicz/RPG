@@ -750,10 +750,8 @@ GameObject:
   - component: {fileID: 95049139308512206}
   - component: {fileID: 54540590770724358}
   - component: {fileID: 136391046417605052}
-  - component: {fileID: 114433598942946292}
   - component: {fileID: 114192813513107016}
   - component: {fileID: 195474052097696294}
-  - component: {fileID: 114729636297389916}
   m_Layer: 9
   m_Name: Archer
   m_TagString: Untagged
@@ -1741,6 +1739,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23327374168270510
 MeshRenderer:
@@ -1772,6 +1771,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23632664514663156
 MeshRenderer:
@@ -1803,6 +1803,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23758009941642344
 MeshRenderer:
@@ -1834,6 +1835,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23984222175037292
 MeshRenderer:
@@ -1865,6 +1867,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33171554991075040
 MeshFilter:
@@ -1954,37 +1957,6 @@ MonoBehaviour:
   projectileToUse: {fileID: 1251516618048952, guid: 0988a271f1ff9a345abcda4125350998,
     type: 2}
   projectileSocket: {fileID: 1305440535320048}
---- !u!114 &114433598942946292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1904332725170944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 1000
-  m_StationaryTurnSpeed: 800
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 0.5
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 1.5
---- !u!114 &114729636297389916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1904332725170944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4248261551897112, guid: 163b9e566a4756749b547328b07e828a, type: 2}
 --- !u!114 &114803361461414296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2041,6 +2013,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -2110,6 +2083,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904332725170944}
   m_Enabled: 1
+  m_AgentTypeID: 0
   m_Radius: 0.29
   m_Speed: 3
   m_Acceleration: 8

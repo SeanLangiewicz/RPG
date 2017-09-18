@@ -24,7 +24,8 @@ namespace RPG.Characters
         {
             PlayAbilitySound();
 
-            player.Heal((config as SelfHealConfig).GetExtraHealth());
+            var playerHealth = player.GetComponent<HealthSystem>();
+            playerHealth.Heal((config as SelfHealConfig).GetExtraHealth());
            
             //TODO Find a way to move audio to parent class
             PlayParticleEffect();
