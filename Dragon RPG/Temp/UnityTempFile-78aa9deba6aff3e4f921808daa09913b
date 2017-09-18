@@ -2,18 +2,33 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:Temp\Assembly-CSharp.dll
+-out:Temp\Assembly-CSharp-Editor.dll
 -unsafe
+-r:Library\ScriptAssemblies\Assembly-CSharp.dll
 -r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
 -r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
 -r:Library/FacebookSDK/Facebook.Unity.Settings.dll
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll"
 -define:UNITY_5_3_OR_NEWER
@@ -102,41 +117,10 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 -define:CROSS_PLATFORM_INPUT
-Assets/_CameraUI/CameraFollow.cs
-Assets/_CameraUI/CameraRaycaster.cs
-Assets/_CameraUI/CursorAffordance.cs
-Assets/_Characters/_Core/AudioTrigger.cs
-Assets/_Characters/_Core/IDimageable.cs
-Assets/_Characters/_Core/SpinMe.cs
-Assets/_Characters/Enemies/Enemy.cs
-Assets/_Characters/Enemies/EnemyUI.cs
-Assets/_Characters/Player/Player.cs
-Assets/_Characters/Scripts/CharacterMovement.cs
-Assets/_Characters/Scripts/DominantHand.cs
-Assets/_Characters/Scripts/HealthSystem.cs
-Assets/_Characters/Scripts/SpecialAbilities.cs
-"Assets/_Characters/Special Abilities/Abilitybehavior.cs"
-"Assets/_Characters/Special Abilities/AbilityConfig.cs"
-"Assets/_Characters/Special Abilities/Area Effect/AreaEffectBeahvior.cs"
-"Assets/_Characters/Special Abilities/Area Effect/AreaEffectConfig.cs"
-"Assets/_Characters/Special Abilities/Power Attack/PowerAttackBehavior.cs"
-"Assets/_Characters/Special Abilities/Power Attack/PowerAttackConfig.cs"
-"Assets/_Characters/Special Abilities/Self Heal/SelfHealBehavior.cs"
-"Assets/_Characters/Special Abilities/Self Heal/SelfHealConfig.cs"
-Assets/_Characters/Weapons/Ranged/Projectile.cs
-Assets/_Characters/Weapons/Weapon.cs
-Assets/_Characters/Weapons/WeaponPickupPoint.cs
-Assets/_Enviroment/Water/Water/Scripts/Displace.cs
-Assets/_Enviroment/Water/Water/Scripts/GerstnerDisplace.cs
-Assets/_Enviroment/Water/Water/Scripts/MeshContainer.cs
-Assets/_Enviroment/Water/Water/Scripts/PlanarReflection.cs
-Assets/_Enviroment/Water/Water/Scripts/SpecularLighting.cs
-Assets/_Enviroment/Water/Water/Scripts/Water.cs
-Assets/_Enviroment/Water/Water/Scripts/WaterBase.cs
-Assets/_Enviroment/Water/Water/Scripts/WaterTile.cs
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
--sdk:unity
+Assets/Editor/CameraRaycasterEditor.cs
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\Boo.Lang.dll"
+-sdk:2.0
